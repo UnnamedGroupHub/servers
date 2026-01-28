@@ -7,5 +7,5 @@
 3. Enable BattlEye in the launcher settings and start the game.
 4. From the main menu, select "Multiplayer" and then "Server Browser."
 5. Direct connect to the server using:
-   - IP Address: `lythium.play.unnamed.group`
+   - IP Address: `antistasi.play.unnamed.group`
    - Port: `2326`
