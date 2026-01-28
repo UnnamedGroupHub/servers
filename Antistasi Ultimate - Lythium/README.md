@@ -1,0 +1,11 @@
+# Antistasi Ultimate - Lythium
+
+## How to Join
+
+1. Subscribe to the [setup mod]() on the Steam Workshop.
+2. In the Arma 3 launcher, ensure that the mod is activated and all dependencies are also loaded.
+3. Enable BattlEye in the launcher settings and start the game.
+4. From the main menu, select "Multiplayer" and then "Server Browser."
+5. Direct connect to the server using:
+   - IP Address: `lythium.play.unnamed.group`
+   - Port: `2326`
