@@ -51,6 +51,35 @@ for (const gameDir of gameDirs) {
   }
 }
 
+const GITHUB_REPO_URL = "https://github.com/UnnamedGroupHub/servers";
+
+// Rewrite relative links to point to GitHub repo
+function rewriteRelativeLinks(markdown, gameName, serverName) {
+  const basePath = `servers/${encodeURIComponent(gameName)}/${encodeURIComponent(serverName)}`;
+
+  return markdown.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+    // Skip absolute URLs and anchors
+    if (
+      url.startsWith("http://") ||
+      url.startsWith("https://") ||
+      url.startsWith("#")
+    ) {
+      return match;
+    }
+
+    // Handle relative paths
+    let cleanPath = url;
+    if (cleanPath.startsWith("./")) {
+      cleanPath = cleanPath.slice(2);
+    }
+
+    const fullPath = `${basePath}/${cleanPath}`;
+    const githubUrl = `${GITHUB_REPO_URL}/tree/main/${fullPath}`;
+
+    return `[${text}](${githubUrl})`;
+  });
+}
+
 // Convert markdown to basic HTML (simple conversion)
 function markdownToHtml(markdown) {
   return (
@@ -262,7 +291,7 @@ const html = `<!DOCTYPE html>
         <details>
           <summary>${server.name}</summary>
           <div class="server-content">
-            ${markdownToHtml(server.readme)}
+            ${markdownToHtml(rewriteRelativeLinks(server.readme, game.name, server.name))}
           </div>
         </details>`,
           )
