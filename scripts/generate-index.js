@@ -13,25 +13,41 @@ if (!fs.existsSync(publicDir)) {
   console.log("Created public directory");
 }
 
-// Get all subdirectories in servers/
-const serverDirs = fs
+// Get all game directories in servers/
+const gameDirs = fs
   .readdirSync(serversDir, { withFileTypes: true })
   .filter((dirent) => dirent.isDirectory())
   .map((dirent) => dirent.name);
 
-// Read README.md from each server directory
-const servers = [];
-for (const dir of serverDirs) {
-  const readmePath = path.join(serversDir, dir, "README.md");
-  if (fs.existsSync(readmePath)) {
-    const content = fs.readFileSync(readmePath, "utf-8");
-    servers.push({
-      name: dir,
-      readme: content,
+// Read README.md from each server directory within each game directory
+const games = [];
+for (const gameDir of gameDirs) {
+  const gamePath = path.join(serversDir, gameDir);
+  const serverDirs = fs
+    .readdirSync(gamePath, { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name);
+
+  const servers = [];
+  for (const serverDir of serverDirs) {
+    const readmePath = path.join(gamePath, serverDir, "README.md");
+    if (fs.existsSync(readmePath)) {
+      const content = fs.readFileSync(readmePath, "utf-8");
+      servers.push({
+        name: serverDir,
+        readme: content,
+      });
+      console.log(`Found README.md in: ${gameDir}/${serverDir}`);
+    } else {
+      console.log(`No README.md found in: ${gameDir}/${serverDir}`);
+    }
+  }
+
+  if (servers.length > 0) {
+    games.push({
+      name: gameDir,
+      servers: servers,
     });
-    console.log(`Found README.md in: ${dir}`);
-  } else {
-    console.log(`No README.md found in: ${dir}`);
   }
 }
 
@@ -189,6 +205,30 @@ const html = `<!DOCTYPE html>
       background-color: #f8f9fa;
       border-radius: 8px;
     }
+    details.game {
+      background: #e8f4fc;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border: 1px solid #b8d4e8;
+    }
+    details.game[open] {
+      margin-bottom: 2rem;
+    }
+    details.game > summary {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      padding: 1rem 1.5rem;
+    }
+    details.game > summary:hover {
+      background-color: #d4e9f7;
+    }
+    .game-servers {
+      padding: 0 1rem 1rem;
+    }
+    .game-servers details {
+      margin-left: 0.5rem;
+    }
     .server-content {
       padding: 0 1.5rem 1.5rem;
       border-top: 1px solid #eee;
@@ -210,13 +250,23 @@ const html = `<!DOCTYPE html>
   </header>
   
   <main>
-    ${servers
+    ${games
       .map(
-        (server) => `
-    <details>
-      <summary>${server.name}</summary>
-      <div class="server-content">
-        ${markdownToHtml(server.readme)}
+        (game) => `
+    <details class="game">
+      <summary>${game.name}</summary>
+      <div class="game-servers">
+        ${game.servers
+          .map(
+            (server) => `
+        <details>
+          <summary>${server.name}</summary>
+          <div class="server-content">
+            ${markdownToHtml(server.readme)}
+          </div>
+        </details>`,
+          )
+          .join("\n")}
       </div>
     </details>`,
       )
@@ -232,5 +282,7 @@ const html = `<!DOCTYPE html>
 
 // Write the HTML file
 fs.writeFileSync(outputFile, html);
+const totalServers = games.reduce((sum, game) => sum + game.servers.length, 0);
 console.log(`\nGenerated ${outputFile}`);
-console.log(`Total servers indexed: ${servers.length}`);
+console.log(`Total games: ${games.length}`);
+console.log(`Total servers indexed: ${totalServers}`);
