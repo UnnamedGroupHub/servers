@@ -1,8 +1,8 @@
 ---
 Hostname: antistasi.play.unnamed.group
 Port: 2326
-Mod Setup: [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3655630060)
-Restart Schedule: Daily at 00:30 UTC
+Mod Setup: "[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3655630060)"
+Restart Schedule: "Daily at 00:30 UTC"
 ---
 
 # Antistasi Ultimate - Lythium
