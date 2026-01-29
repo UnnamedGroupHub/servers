@@ -9,3 +9,10 @@
 5. Direct connect to the server using:
    - IP Address: `antistasi.play.unnamed.group`
    - Port: `2326`
+
+## For Staff
+
+This directory has a couple subdirectories for various server management tasks:
+
+- [`@setup`](./@setup): Source for the setup mod used by members to join the server with the correct mods.
+- [`amp`](./amp): AMP server configuration files for managing the Arma 3 server instance.
