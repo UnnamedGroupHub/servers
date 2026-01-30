@@ -8,6 +8,11 @@
 - **Port:** `2326`
 - **Mod Setup:** [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3655630060)
 - **Restart Schedule:** Daily at 00:00 and 12:00 UTC
+- **Whitelisted Extra Mods:**
+  - [Zeus Enhanced](https://steamcommunity.com/sharedfiles/filedetails?id=1779063631)
+  - [ZEI - Zeus and Eden Interiors ( Continued )](https://steamcommunity.com/sharedfiles/filedetails/?id=3344508108)
+  - [Zeus Framerate Monitor](https://steamcommunity.com/sharedfiles/filedetails?id=3438718557)
+  - [JSRS SOUNDMOD 2025](https://steamcommunity.com/sharedfiles/filedetails?id=3407948300)
 
 ## How to Join
 
