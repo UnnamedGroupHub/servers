@@ -18,6 +18,7 @@ if (!fs.existsSync(publicDir)) {
 const gameDirs = fs
   .readdirSync(serversDir, { withFileTypes: true })
   .filter((dirent) => dirent.isDirectory())
+  .filter((dirent) => !dirent.name.includes(".WIP"))
   .map((dirent) => dirent.name);
 
 // Read README.md from each server directory within each game directory
@@ -27,6 +28,7 @@ for (const gameDir of gameDirs) {
   const serverDirs = fs
     .readdirSync(gamePath, { withFileTypes: true })
     .filter((dirent) => dirent.isDirectory())
+    .filter((dirent) => !dirent.name.includes(".WIP"))
     .map((dirent) => dirent.name);
 
   const servers = [];
