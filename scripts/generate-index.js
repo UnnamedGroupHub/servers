@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { marked } = require("marked");
 
 // Paths are relative to the repository root (parent of scripts/)
 const rootDir = path.join(__dirname, "..");
@@ -80,48 +81,11 @@ function rewriteRelativeLinks(markdown, gameName, serverName) {
   });
 }
 
-// Convert markdown to basic HTML (simple conversion)
-function markdownToHtml(markdown) {
-  return (
-    markdown
-      // Remove markdown code fences if wrapping the whole content
-      .replace(/^```markdown\n?/gm, "")
-      .replace(/^```\n?$/gm, "")
-      // Headers
-      .replace(/^### (.+)$/gm, "<h3>$1</h3>")
-      .replace(/^## (.+)$/gm, "<h2>$1</h2>")
-      .replace(/^# (.+)$/gm, "<h1>$1</h1>")
-      // Blockquotes
-      .replace(/^> (.+)$/gm, "<blockquote>$1</blockquote>")
-      // Bold
-      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-      // Inline code
-      .replace(/`([^`]+)`/g, "<code>$1</code>")
-      // Links
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-      // Unordered list items
-      .replace(/^- (.+)$/gm, "<li>$1</li>")
-      // Ordered list items
-      .replace(/^\d+\. (.+)$/gm, "<li>$1</li>")
-      // Wrap consecutive <li> in <ul>
-      .replace(/((?:<li>.*<\/li>\n?)+)/g, "<ul>$1</ul>")
-      // Paragraphs (lines that aren't already HTML)
-      .split("\n\n")
-      .map((block) => {
-        block = block.trim();
-        if (
-          block &&
-          !block.startsWith("<h") &&
-          !block.startsWith("<ul") &&
-          !block.startsWith("<blockquote")
-        ) {
-          return `<p>${block}</p>`;
-        }
-        return block;
-      })
-      .join("\n")
-  );
-}
+// Configure marked options
+marked.setOptions({
+  gfm: true, // GitHub Flavored Markdown
+  breaks: false,
+});
 
 // Generate HTML
 const html = `<!DOCTYPE html>
@@ -291,7 +255,7 @@ const html = `<!DOCTYPE html>
         <details>
           <summary>${server.name}</summary>
           <div class="server-content">
-            ${markdownToHtml(rewriteRelativeLinks(server.readme, game.name, server.name))}
+            ${marked.parse(rewriteRelativeLinks(server.readme, game.name, server.name))}
           </div>
         </details>`,
           )
