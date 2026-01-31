@@ -1,6 +1,6 @@
-# Antistasi Ultimate - Lythium
+# Antistasi Ultimate - Lythium (Modern, CUP)
 
-> Antistasi Ultimate - Lythium is a community-run Arma 3 server hosted by Unnamed Group. It features the popular Antistasi Ultimate mod on the Lythium map, providing an engaging and dynamic gameplay experience.
+> Antistasi Ultimate - Lythium (Modern, CUP) is a community-run Arma 3 server hosted by Unnamed Group. It features the popular Antistasi Ultimate mod on the Lythium map, providing an engaging and dynamic gameplay experience.
 
 ## Server Information
 

@@ -1,6 +1,6 @@
-# Antistasi Ultimate - Madrigal
+# Antistasi Ultimate - Madrigal (Halo)
 
-> Antistasi Ultimate - Madrigal is a community-run Arma 3 server hosted by Unnamed Group. It features the popular Antistasi Ultimate mod on the Madrigal map, providing an engaging and dynamic gameplay experience.
+> Antistasi Ultimate - Madrigal (Halo) is a community-run Arma 3 server hosted by Unnamed Group. It features the popular Antistasi Ultimate mod on the Madrigal map, providing an engaging and dynamic gameplay experience.
 
 ## Server Information
 
