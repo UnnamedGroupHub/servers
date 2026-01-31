@@ -1,5 +1,5 @@
 class CfgPatches {
-    class ugsm_aul
+    class ugsm_gs_modern_cup
     {
         units[] = {};
         weapons[] = {};
