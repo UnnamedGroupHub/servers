@@ -97,9 +97,10 @@ const html = `<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servers Index</title>
   <style>
-    @import url("https://use.typekit.net/oqu5sxm.css");
     html {
-      font-family: "purista-web", monospace;
+      background: black;
+      color: white;
+      font-family: monospace;
     }
     summary {
       cursor: pointer;
