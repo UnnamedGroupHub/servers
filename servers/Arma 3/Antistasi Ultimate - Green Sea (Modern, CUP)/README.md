@@ -6,7 +6,7 @@
 
 - **Hostname:** `antistasi.play.unnamed.group`
 - **Port:** `2332`
-- **Mod Setup:** [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3655630060)
+- **Mod Setup:** [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3657436433)
 - **Restart Schedule:** Daily at 00:00 and 12:00 UTC
 - **Whitelisted Mods:** _(optional)_
   - [Zeus Enhanced](https://steamcommunity.com/sharedfiles/filedetails?id=1779063631)
@@ -20,7 +20,7 @@
 
 ## How to Join
 
-1. Subscribe to the [setup mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3655630060) on the Steam Workshop.
+1. Subscribe to the [setup mod](https://steamcommunity.com/sharedfiles/filedetails/?id=3657436433) on the Steam Workshop.
 2. In the Arma 3 launcher, ensure that the mod is activated and all dependencies are also loaded.
 3. Enable BattlEye in the launcher settings and start the game.
 4. From the main menu, select "Multiplayer" and then "Server Browser."
