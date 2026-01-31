@@ -1,5 +1,5 @@
 class CfgPatches {
-    class ugsm_au_madrigal
+    class ugsm_au_napfw_sw_r
     {
         units[] = {};
         weapons[] = {};
