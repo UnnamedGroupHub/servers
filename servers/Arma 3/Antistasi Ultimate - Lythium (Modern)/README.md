@@ -11,6 +11,11 @@
 - **Whitelisted Extra Mods:**
   - [Zeus Enhanced](https://steamcommunity.com/sharedfiles/filedetails?id=1779063631)
   - [JSRS SOUNDMOD 2025](https://steamcommunity.com/sharedfiles/filedetails?id=3407948300)
+  - [CH View Distance](https://steamcommunity.com/sharedfiles/filedetails?id=837729515)
+  - [DUI - Squad Radar](https://steamcommunity.com/sharedfiles/filedetails/?id=1638341685)
+  - [Blastcore Murr Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=2257686620)
+  - [Enhanced Map](https://steamcommunity.com/sharedfiles/filedetails/?id=2467589125)
+  - [Enhanced GPS](https://steamcommunity.com/sharedfiles/filedetails/?id=2480263219)
 
 ## How to Join
 
