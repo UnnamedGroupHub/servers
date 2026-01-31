@@ -16,6 +16,7 @@
   - [Blastcore Murr Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=2257686620)
   - [Enhanced Map](https://steamcommunity.com/sharedfiles/filedetails/?id=2467589125)
   - [Enhanced GPS](https://steamcommunity.com/sharedfiles/filedetails/?id=2480263219)
+  - [ACRE2](https://steamcommunity.com/sharedfiles/filedetails/?id=751965892)
 
 ## How to Join
 
