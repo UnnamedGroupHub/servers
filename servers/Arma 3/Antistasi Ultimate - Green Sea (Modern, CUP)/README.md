@@ -1,11 +1,11 @@
-# Antistasi Ultimate - Lythium (Modern, CUP)
+# Antistasi Ultimate - Green Sea (Modern, CUP)
 
-> Antistasi Ultimate - Lythium (Modern, CUP) is a community-run Arma 3 server hosted by Unnamed Group. It features the popular Antistasi Ultimate mod on the Lythium map, providing an engaging and dynamic gameplay experience.
+> Antistasi Ultimate - Green Sea (Modern, CUP) is a community-run Arma 3 server hosted by Unnamed Group. It features the popular Antistasi Ultimate mod on the Green Sea map, providing an engaging and dynamic gameplay experience.
 
 ## Server Information
 
 - **Hostname:** `antistasi.play.unnamed.group`
-- **Port:** `2326`
+- **Port:** `2332`
 - **Mod Setup:** [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3655630060)
 - **Restart Schedule:** Daily at 00:00 and 12:00 UTC
 - **Whitelisted Mods:** _(optional)_
