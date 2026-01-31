@@ -17,7 +17,7 @@
 4. From the main menu, select "Multiplayer" and then "Server Browser."
 5. Direct connect to the server using:
    - IP Address: `antistasi.play.unnamed.group`
-   - Port: `2326`
+   - Port: `2332`
 
 ## For Staff
 
