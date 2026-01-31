@@ -8,7 +8,7 @@
 - **Port:** `2326`
 - **Mod Setup:** [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3655630060)
 - **Restart Schedule:** Daily at 00:00 and 12:00 UTC
-- **Whitelisted Extra Mods:**
+- **Whitelisted Mods:** _(optional)_
   - [Zeus Enhanced](https://steamcommunity.com/sharedfiles/filedetails?id=1779063631)
   - [JSRS SOUNDMOD 2025](https://steamcommunity.com/sharedfiles/filedetails?id=3407948300)
   - [CH View Distance](https://steamcommunity.com/sharedfiles/filedetails?id=837729515)
@@ -24,9 +24,7 @@
 2. In the Arma 3 launcher, ensure that the mod is activated and all dependencies are also loaded.
 3. Enable BattlEye in the launcher settings and start the game.
 4. From the main menu, select "Multiplayer" and then "Server Browser."
-5. Direct connect to the server using:
-   - IP Address: `antistasi.play.unnamed.group`
-   - Port: `2326`
+5. Direct connect to the server using the [hostname and port above](#server-information).
 
 ## For Staff
 
