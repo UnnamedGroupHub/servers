@@ -1,4 +1,5 @@
 .hemttout/
 releases/
-public/
+/public/
 /node_modules/
+/source/generate-index.js
