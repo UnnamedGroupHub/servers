@@ -1,4 +1,4 @@
-import { serverIndex } from "./server-index.js";
+import { serverIndex } from "./index.js";
 
 const GITHUB_REPO_URL = "https://github.com/UnnamedGroupHub/servers";
 
