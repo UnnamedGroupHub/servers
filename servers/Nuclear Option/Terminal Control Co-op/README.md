@@ -1,6 +1,6 @@
 # Breakout Co-op
 
-> Unnamed Group's Nuclear Option server running Breakout Co-op missions
+> Unnamed Group's Nuclear Option server running the Breakout Co-op mission
 
 ## Server Details
 
